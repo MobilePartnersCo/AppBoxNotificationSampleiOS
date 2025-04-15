@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BB8A3B12D9535F500E92BDA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9BB8A3B02D9535F500E92BDA /* FirebaseAnalytics */; };
-		9BB8A3B32D9535F500E92BDA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9BB8A3B22D9535F500E92BDA /* FirebaseCrashlytics */; };
-		9BB8A3B52D9535F500E92BDA /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9BB8A3B42D9535F500E92BDA /* FirebaseMessaging */; };
-		9BB8A3B82D95360F00E92BDA /* AppBoxNotificationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9BB8A3B72D95360F00E92BDA /* AppBoxNotificationSDK */; };
+		9BCABED72DADE2970010C34B /* AppBoxNotificationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB8A3B82D95360F00E92BDA /* AppBoxNotificationSDK in Frameworks */,
-				9BB8A3B52D9535F500E92BDA /* FirebaseMessaging in Frameworks */,
-				9BB8A3B12D9535F500E92BDA /* FirebaseAnalytics in Frameworks */,
-				9BB8A3B32D9535F500E92BDA /* FirebaseCrashlytics in Frameworks */,
+				9BCABED72DADE2970010C34B /* AppBoxNotificationSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,10 +83,7 @@
 			);
 			name = NotiSample;
 			packageProductDependencies = (
-				9BB8A3B02D9535F500E92BDA /* FirebaseAnalytics */,
-				9BB8A3B22D9535F500E92BDA /* FirebaseCrashlytics */,
-				9BB8A3B42D9535F500E92BDA /* FirebaseMessaging */,
-				9BB8A3B72D95360F00E92BDA /* AppBoxNotificationSDK */,
+				9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */,
 			);
 			productName = NotiSample;
 			productReference = 9BB8A3972D95357400E92BDA /* NotiSample.app */;
@@ -110,6 +101,7 @@
 				TargetAttributes = {
 					9BB8A3962D95357400E92BDA = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -123,8 +115,7 @@
 			mainGroup = 9BB8A38E2D95357400E92BDA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9BB8A3AF2D9535F500E92BDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				9BB8A3B62D95360F00E92BDA /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */,
+				9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9BB8A3982D95357400E92BDA /* Products */;
@@ -162,6 +153,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NotiSample/NotiSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43TBG9ECT6;
@@ -185,6 +178,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -195,6 +189,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NotiSample/NotiSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 43TBG9ECT6;
@@ -366,43 +362,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9BB8A3AF2D9535F500E92BDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.10.0;
-			};
-		};
-		9BB8A3B62D95360F00E92BDA /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */ = {
+		9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MobilePartnersCo/AppBoxNotificationSDKFramework";
 			requirement = {
-				kind = revision;
-				revision = 5718a6c6cff42b8fc23f9ced27ee703380fa7bc0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9BB8A3B02D9535F500E92BDA /* FirebaseAnalytics */ = {
+		9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9BB8A3AF2D9535F500E92BDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		9BB8A3B22D9535F500E92BDA /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9BB8A3AF2D9535F500E92BDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		9BB8A3B42D9535F500E92BDA /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9BB8A3AF2D9535F500E92BDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		9BB8A3B72D95360F00E92BDA /* AppBoxNotificationSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9BB8A3B62D95360F00E92BDA /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */;
+			package = 9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */;
 			productName = AppBoxNotificationSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

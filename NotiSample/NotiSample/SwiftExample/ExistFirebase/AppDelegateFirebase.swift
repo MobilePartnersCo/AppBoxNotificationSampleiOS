@@ -20,7 +20,7 @@ class AppDelegateFirebase: UIResponder, UIApplicationDelegate  {
         // -----------------------------------------------------------------------------------------
         // AppBoxNotification 초기화
         // -----------------------------------------------------------------------------------------
-        AppBoxNotification.shared.initSDK(projectId: "", debugMode: true) { result, error in
+        AppBoxNotification.shared.initSDK(projectId: "YOUR_PROJECT_ID", debugMode: true, autoRegisterForAPNS: false) { result, error, granted in
             if let error = error {
                 print("error :: \(error)")
             } else {
@@ -30,18 +30,25 @@ class AppDelegateFirebase: UIResponder, UIApplicationDelegate  {
         // -----------------------------------------------------------------------------------------
         
         // -----------------------------------------------------------------------------------------
+        // AppBoxNotification 푸시권한 요청
+        // -----------------------------------------------------------------------------------------
+        AppBoxNotification.shared.requestPushAuthorization { granted in
+            if granted {
+                print("권한 허용")
+            } else {
+                print("권한 실패")
+            }
+        }
+        // -----------------------------------------------------------------------------------------
+        
+        // -----------------------------------------------------------------------------------------
         // APNS 권한 및 등록
         // -----------------------------------------------------------------------------------------
         UNUserNotificationCenter.current().delegate = self
         
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-          options: authOptions,
-          completionHandler: { _, _ in }
-        )
-        
         application.registerForRemoteNotifications()
         // -----------------------------------------------------------------------------------------
+        
         
         return true
     }

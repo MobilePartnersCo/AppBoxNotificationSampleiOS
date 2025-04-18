@@ -367,7 +367,7 @@
 			repositoryURL = "https://github.com/MobilePartnersCo/AppBoxNotificationSDKFramework";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 0.0.18;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

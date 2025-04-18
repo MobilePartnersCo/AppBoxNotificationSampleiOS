@@ -15,35 +15,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // -----------------------------------------------------------------------------------------
+    // APNS 권한 및 등록
+    // -----------------------------------------------------------------------------------------
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    // -----------------------------------------------------------------------------------------
+    
+    // -----------------------------------------------------------------------------------------
     // AppBoxNotification 초기화
     // -----------------------------------------------------------------------------------------
-    [AppBoxNotification.shared initSDKWithProjectId:@"" debugMode:true completion:^(AppBoxNotiResultModel *result, NSError *error) {
+    [AppBoxNotification.shared initSDKWithProjectId:@"YOUR_PROJECT_ID" debugMode:true completion:^(AppBoxNotiResultModel *result, NSError *error, NSNumber *granted) {
         if (error != nil) {
             NSLog(@"error :: %@", error);
         } else {
             NSLog(@"success :: %@", result.message);
         }
         
-        [application registerForRemoteNotifications];
+        if (granted != nil) {
+            if (![granted boolValue]) {
+                NSLog(@"권한 미허용");
+            }
+        }
     }];
     // -----------------------------------------------------------------------------------------
-    
-    
-    // -----------------------------------------------------------------------------------------
-    // APNS 권한 및 등록 
-    // -----------------------------------------------------------------------------------------
-    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-    
-    UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
-        UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
-    [[UNUserNotificationCenter currentNotificationCenter]
-        requestAuthorizationWithOptions:authOptions
-        completionHandler:^(BOOL granted, NSError * _Nullable error) {
-          
-        }
-    ];
-    // -----------------------------------------------------------------------------------------
-    
     return YES;
 }
 

@@ -71,6 +71,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // -----------------------------------------------------------------------------------------
         // AppBoxNotification 클릭 데이터 제공
         // -----------------------------------------------------------------------------------------
+        AppBoxNotification.shared.saveNotiClick(response)
         if let notiReceive = AppBoxNotification.shared.receiveNotiModel(response) {
             print("push received :: \(notiReceive.params)")
         }

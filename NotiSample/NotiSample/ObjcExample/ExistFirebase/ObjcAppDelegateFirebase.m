@@ -73,6 +73,7 @@
     // -----------------------------------------------------------------------------------------
     // AppBoxNotification 클릭 데이터 제공
     // -----------------------------------------------------------------------------------------
+    [AppBoxNotification.shared saveNotiClick:response];
     AppBoxNotiModel *notiReceive = [AppBoxNotification.shared receiveNotiModel:response];
     if (notiReceive != nil) {
         NSLog(@"push received :: %@", notiReceive.params);

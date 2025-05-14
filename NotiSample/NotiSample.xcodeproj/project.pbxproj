@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BCABED72DADE2970010C34B /* AppBoxNotificationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */; };
+		9B0B58022DD47B6E008F5152 /* AppBoxNotificationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9B0B58012DD47B6E008F5152 /* AppBoxNotificationSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BCABED72DADE2970010C34B /* AppBoxNotificationSDK in Frameworks */,
+				9B0B58022DD47B6E008F5152 /* AppBoxNotificationSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = NotiSample;
 			packageProductDependencies = (
-				9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */,
+				9B0B58012DD47B6E008F5152 /* AppBoxNotificationSDK */,
 			);
 			productName = NotiSample;
 			productReference = 9BB8A3972D95357400E92BDA /* NotiSample.app */;
@@ -115,7 +115,7 @@
 			mainGroup = 9BB8A38E2D95357400E92BDA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */,
+				9B0B58002DD47B6E008F5152 /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9BB8A3982D95357400E92BDA /* Products */;
@@ -362,20 +362,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */ = {
+		9B0B58002DD47B6E008F5152 /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MobilePartnersCo/AppBoxNotificationSDKFramework";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.23;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9BCABED62DADE2970010C34B /* AppBoxNotificationSDK */ = {
+		9B0B58012DD47B6E008F5152 /* AppBoxNotificationSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9BCABED52DADE2970010C34B /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */;
+			package = 9B0B58002DD47B6E008F5152 /* XCRemoteSwiftPackageReference "AppBoxNotificationSDKFramework" */;
 			productName = AppBoxNotificationSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

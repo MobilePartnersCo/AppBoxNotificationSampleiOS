@@ -44,6 +44,23 @@
     }
     // -----------------------------------------------------------------------------------------
     
+    // -----------------------------------------------------------------------------------------
+    // 세그먼트 저장
+    // -----------------------------------------------------------------------------------------
+    NSDictionary *segmentModel = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  @"이름", @"name",
+                                  @"12", @"age",
+                                  nil];
+    
+    [AppBoxNotification.shared saveSegmentWithSegment:segmentModel completion:^(AppBoxNotiResultModel * _Nullable result, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"error :: %@", error);
+        } else {
+            NSLog(@"success :: %@", result.message);
+        }
+    }];
+    // -----------------------------------------------------------------------------------------
+    
 }
 
 // -----------------------------------------------------------------------------------------

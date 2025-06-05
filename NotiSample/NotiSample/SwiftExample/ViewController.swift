@@ -40,6 +40,23 @@ class ViewController: UIViewController {
             }
         }
         // -----------------------------------------------------------------------------------------
+        
+        // -----------------------------------------------------------------------------------------
+        // 세그먼트 저장
+        // -----------------------------------------------------------------------------------------
+        let segmentModel: [String: String] = [
+            "name": "이름",
+            "age": "12"
+        ]
+        
+        AppBoxNotification.shared.saveSegment(segment: segmentModel) { result, error in
+            if let error = error {
+                print("error :: \(error)")
+            } else {
+                print("success :: \(String(describing: result?.message))")
+            }
+        }
+        // -----------------------------------------------------------------------------------------
     }
 }
 
